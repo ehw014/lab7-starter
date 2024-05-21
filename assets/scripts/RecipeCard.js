@@ -8,7 +8,7 @@ class RecipeCard extends HTMLElement {
 
 		// EXPOSE - START (All expose numbers start with A)
 		// A1. TODO - Attach the shadow DOM to this Web Component (leave the mode open)
-		let shadowElement = this.attachShadow({mode:'open'});
+		let shadowElement = this.attachShadow({ mode: 'open' });
 		// A2. TODO - Create an <article> element - This will hold our markup once our data is set
 		let articleElement = document.createElement('article');
 		// A3. TODO - Create a style element - This will hold all of the styles for the Web Component
@@ -133,19 +133,19 @@ class RecipeCard extends HTMLElement {
 		artiEle.innerHTML = `
 		<img src="${data.imgSrc}"
 		alt="${data.imgAlt}">
-	  <p class="title">
-		<a href="${data.titleLnk}">${data.titleTxt}</a>
-	  </p>
-	  <p class="organization">${data.organization}</p>
-	  <div class="rating">
-		<span>${data.rating}</span>
-		<img src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
-		<span>(${data.numRatings})</span>
-	  </div>
-	  <time>${data.lengthTime}</time>
-	  <p class="ingredients">
-	  ${data.ingredients}
-	  </p>`;
+		<p class="title">
+			<a href="${data.titleLnk}">${data.titleTxt}</a>
+		</p>
+		<p class="organization">${data.organization}</p>
+		<div class="rating">
+			<span>${data.rating}</span>
+				<img src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
+			<span>(${data.numRatings})</span>
+		</div>
+		<time>${data.lengthTime}</time>
+		<p class="ingredients">
+	  		${data.ingredients}
+	  	</p>`;
 
 	}
 }
